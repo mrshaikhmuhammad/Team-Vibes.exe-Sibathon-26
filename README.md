@@ -1,20 +1,16 @@
-# Team-Vibes.exe-Sibathon-26
-Automating Hospital Appointment Scheduling with AI Assistance
+# React + Vite
 
-Introduction
-Currently, patients calling a hospital must wait as staff manually determine the right doctor based on symptoms, availability, and urgency. This process can take an hour, which is challenging for urgent cases. Our goal is to automate this process with AI while ensuring human oversight.
-Current Process Challenges
-·	Patients call and describe symptoms.
-·	Hospital staff manually identify the right specialist (ENT, Ortho, etc.) using handbooks or experience.
-·	They check doctors’ availability manually.
-·	The patient is assigned an appointment.
-·	This process may take up to an hour.
-Proposed Solution
-We will implement an AI-assisted appointment system. The patient calls or uses our website. The AI will analyze the symptoms and suggest the appropriate specialist. It will check doctors’ schedules in real time. A staff member will review the AI suggestion, confirm the diagnosis category (if needed), and finalize the appointment. The patient will receive immediate feedback.
-Accuracy and Oversight
-Accuracy is a priority. The AI suggests a doctor and time slot, but a trained staff member will verify the records and confirm the appointment before informing the patient. This ensures robust accuracy and human judgment in critical cases.
-Key Benefits
-Time reduction: Immediate AI doctor matching and scheduling.
-Prioritization: Faster triage for urgent cases.
-Efficiency: Reduced staff workload and decision time.
-Accuracy: Human validation ensures quality.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
