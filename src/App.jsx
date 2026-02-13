@@ -1,9 +1,12 @@
+import { Routes, Route } from "react-router-dom";
+import AiAssistant from "./pages/AiAssistant";
+import "./App.css";
+
 function App() {
   return (
-    <div className="container mt-5">
-      <h1 className="text-primary">Bootstrap is Working 🚀</h1>
-      <button className="btn btn-success">Click Me</button>
-    </div>
+    <Routes>
+      <Route path="/" element={<AiAssistant />} />
+    </Routes>
   );
 }
 
