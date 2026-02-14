@@ -1,28 +1,25 @@
 package com.vibes_exe.appointment_automation.controller;
 
-import com.vibes_exe.appointment_automation.entity.Doctors;
-import com.vibes_exe.appointment_automation.service.DatabaseService;
+import com.vibes_exe.appointment_automation.entity.doctors;
+import com.vibes_exe.appointment_automation.service.database_service;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.ReactiveAdapterRegistry;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 //Responsible for providing database resources through API
 @RestController
 @RequestMapping("/database")
-public class DatabaseController {
+public class database_controller {
     @Autowired
-    private DatabaseService service;
+    private database_service service;
 
     @GetMapping("/read_doctors")
-    public ResponseEntity<?> getDoctors(){
+    public ResponseEntity<?> get_doctors(){
         try{
-            List<Doctors> doctors = service.read_doctors();
+            List<doctors> doctors = service.read_doctors();
             System.out.println(doctors);
 
             if(doctors == null || doctors.isEmpty()){
@@ -34,5 +31,15 @@ public class DatabaseController {
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    @PostMapping("/insert_doctor")
+    public ResponseEntity<?> insert_doctor(@RequestBody doctors doctor){
+        try{
+            service.insert_doctors(doctor);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<>(doctor, HttpStatus.OK);
     }
 }
