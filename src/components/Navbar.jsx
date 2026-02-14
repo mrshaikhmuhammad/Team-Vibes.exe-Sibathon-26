@@ -12,7 +12,7 @@ function CustomNavbar() {
           style={{ fontWeight: "600", color: "#0d6efd", cursor: "pointer" }}
           onClick={() => navigate("/")}
         >
-          🏥 Aga Khan Hospital
+          🏥 VIBES Care Hospital
         </Navbar.Brand>
 
         <Navbar.Toggle />

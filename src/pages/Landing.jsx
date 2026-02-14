@@ -131,7 +131,7 @@ function Landing() {
       {/* FOOTER */}
       <div className="bg-dark text-white py-4">
         <Container className="text-center">
-          <p className="mb-1">© 2026 Aga Khan Hospital</p>
+          <p className="mb-1">© 2026 VIBES Care Hospital</p>
           <small>Committed to quality care, education, and innovation.</small>
         </Container>
       </div>

@@ -16,9 +16,10 @@ function DoctorCard({ doctor }) {
           <strong>Location:</strong> {doctor.location}
         </Card.Text>
 
-        <Button variant="success">
+       <a href="https://docs.google.com/forms/d/e/1FAIpQLSficTt0f-DDy0qOOFuAuVmPQxUSRJxYDD-xF-XfCoqX9MByvw/viewform?usp=publish-editor"><Button variant="success">
           Book Appointment
         </Button>
+        </a>
       </Card.Body>
     </Card>
   );
