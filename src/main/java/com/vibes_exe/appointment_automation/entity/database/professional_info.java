@@ -1,6 +1,5 @@
-package com.vibes_exe.appointment_automation.entity;
+package com.vibes_exe.appointment_automation.entity.database;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,22 +7,22 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class professional_info {
 
     @Id
-    private ObjectId professionId;
+    private String professionId;
 
     // Reference to Doctor _id
-    private ObjectId doctorId;
+    private String doctorId;
     private String specialization;
     private String qualification;
-    private int yearsOfExperience;
-    private double consultationFee;
+    private Integer yearsOfExperience;
+    private Double consultationFee;
 
     // Constructors
     public professional_info() {
     }
 
-    public professional_info(ObjectId doctorId, String specialization,
-                            String qualification, int yearsOfExperience,
-                            double consultationFee) {
+    public professional_info(String doctorId, String specialization,
+                            String qualification, Integer yearsOfExperience,
+                            Double consultationFee) {
         this.doctorId = doctorId;
         this.specialization = specialization;
         this.qualification = qualification;
@@ -33,14 +32,14 @@ public class professional_info {
 
     // Getters and Setters
 
-    public ObjectId getId() {
+    public String getId() {
         return professionId;
     }
 
-    public ObjectId getDoctorId() {
+    public String getDoctorId() {
         return doctorId;
     }
-    public void setDoctorId(ObjectId doctorId) {
+    public void setDoctorId(String doctorId) {
         this.doctorId = doctorId;
     }
 
@@ -58,17 +57,17 @@ public class professional_info {
         this.qualification = qualification;
     }
 
-    public int getYearsOfExperience() {
+    public Integer getYearsOfExperience() {
         return yearsOfExperience;
     }
-    public void setYearsOfExperience(int yearsOfExperience) {
+    public void setYearsOfExperience(Integer yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
     }
 
-    public double getConsultationFee() {
+    public Double getConsultationFee() {
         return consultationFee;
     }
-    public void setConsultationFee(double consultationFee) {
+    public void setConsultationFee(Double consultationFee) {
         this.consultationFee = consultationFee;
     }
 }

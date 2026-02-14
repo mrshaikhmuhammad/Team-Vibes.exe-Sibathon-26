@@ -1,6 +1,5 @@
-package com.vibes_exe.appointment_automation.entity;
+package com.vibes_exe.appointment_automation.entity.database;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.*;
 
@@ -10,18 +9,18 @@ import java.util.List;
 public class availability_info {
 
     @Id
-    private ObjectId availabilityId; // MongoDB ObjectId as string
+    private String availabilityId; // MongoDB String as string
 
-    private ObjectId doctorId; // Reference to doctorBasicInfo _id
+    private String doctorId; //   Reference to doctorBasicInfo _id
     private List<String> availableDays; // e.g., ["Monday", "Wednesday", "Friday"]
     private String startTime; // e.g., "09:00"
     private String endTime;   // e.g., "14:00"
-    private int appointmentDuration; // in minutes
+    private Integer appointmentDuration; // in minutes
 
     public availability_info(){
 
     }
-    public availability_info(ObjectId availabilityId, ObjectId doctorId, List<String> availableDays, String startTime, String endTime, int appointmentDuration) {
+    public availability_info(String availabilityId, String doctorId, List<String> availableDays, String startTime, String endTime, Integer appointmentDuration) {
         this.availabilityId = availabilityId;
         this.doctorId = doctorId;
         this.availableDays = availableDays;
@@ -30,17 +29,17 @@ public class availability_info {
         this.appointmentDuration = appointmentDuration;
     }
 
-    public ObjectId getDoctorId() {
+    public String getDoctorId() {
         return doctorId;
     }
-    public void setDoctorId(ObjectId doctorId) {
+    public void setDoctorId(String doctorId) {
         this.doctorId = doctorId;
     }
 
-    public ObjectId getavailabilityId() {
+    public String getavailabilityId() {
         return availabilityId;
     }
-    public void setavailabilityId(ObjectId availabilityId) {
+    public void setavailabilityId(String availabilityId) {
         this.availabilityId = availabilityId;
     }
 
@@ -65,10 +64,10 @@ public class availability_info {
         this.endTime = endTime;
     }
 
-    public int getAppointmentDuration() {
+    public Integer getAppointmentDuration() {
         return appointmentDuration;
     }
-    public void setAppointmentDuration(int appointmentDuration) {
+    public void setAppointmentDuration(Integer appointmentDuration) {
         this.appointmentDuration = appointmentDuration;
     }
 }

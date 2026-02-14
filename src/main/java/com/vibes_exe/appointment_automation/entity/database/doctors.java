@@ -1,6 +1,5 @@
-package com.vibes_exe.appointment_automation.entity;
+package com.vibes_exe.appointment_automation.entity.database;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class doctors {
 
     @Id
-    private ObjectId id;
+    private String id;
 
     private basic_info basicInfo;
     private professional_info professionalInfo;
@@ -19,14 +18,14 @@ public class doctors {
     public doctors(basic_info basicInfo,
                   professional_info professionalInfo,
                   availability_info availability) {
-        this.basicInfo.setDoctorId(id);
         this.basicInfo = basicInfo;
-
         this.basicInfo.setDoctorId(id);
-        this.professionalInfo = professionalInfo;
 
-        this.availability.setDoctorId(id);
+        this.professionalInfo = professionalInfo;
+        this.basicInfo.setDoctorId(id);
+
         this.availability = availability;
+        this.availability.setDoctorId(id);
     }
 
     public availability_info getAvailability() {
@@ -50,10 +49,10 @@ public class doctors {
         this.basicInfo = basicInfo;
     }
 
-    public ObjectId getId() {
+    public String getId() {
         return id;
     }
-    public void setId(ObjectId id) {
+    public void setId(String id) {
         this.id = id;
     }
 }

@@ -1,6 +1,6 @@
 package com.vibes_exe.appointment_automation.controller;
 
-import com.vibes_exe.appointment_automation.entity.doctors;
+import com.vibes_exe.appointment_automation.entity.database.doctors;
 import com.vibes_exe.appointment_automation.service.database_service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

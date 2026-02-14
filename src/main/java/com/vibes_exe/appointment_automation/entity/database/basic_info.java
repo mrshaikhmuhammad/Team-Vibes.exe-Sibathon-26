@@ -1,6 +1,5 @@
-package com.vibes_exe.appointment_automation.entity;
+package com.vibes_exe.appointment_automation.entity.database;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,9 +7,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class basic_info {
 
     @Id
-    private ObjectId basicId; // MongoDB ObjectId as String
+    private String basicId; // MongoDB String as String
 
-    private ObjectId doctorId;
+    private String doctorId;
     private String firstName;
     private String lastName;
     private String gender;
@@ -23,7 +22,7 @@ public class basic_info {
     }
 
     // Parameterized constructor
-    public basic_info(ObjectId doctorId, String firstName, String lastName, String gender,
+    public basic_info(String doctorId, String firstName, String lastName, String gender,
                            String contactNumber, String email, String city) {
         this.doctorId = doctorId;
         this.firstName = firstName;
@@ -35,17 +34,17 @@ public class basic_info {
     }
 
     // Getters and Setters
-    public ObjectId getBasicId() {
+    public String getBasicId() {
         return basicId;
     }
-    public void setBasicId(ObjectId basicId) {
+    public void setBasicId(String basicId) {
         this.basicId = basicId;
     }
 
-    public ObjectId getDoctorId() {
+    public String getDoctorId() {
         return doctorId;
     }
-    public void setDoctorId(ObjectId doctorId) {
+    public void setDoctorId(String doctorId) {
         this.doctorId = doctorId;
     }
 
