@@ -21,8 +21,8 @@ function CustomNavbar() {
           {/* Navigation Links */}
           <Nav>
             <Nav.Link onClick={() => navigate("/")}>Home</Nav.Link>
+            <Nav.Link>About</Nav.Link>
             <Nav.Link>Services</Nav.Link>
-            <Nav.Link>Find a Doctor</Nav.Link>
             <Nav.Link>Contact</Nav.Link>
           </Nav>
 

@@ -1,9 +1,6 @@
 import { Card, Button, Badge } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 
 function DoctorCard({ doctor }) {
-  const navigate = useNavigate();
-
   return (
     <Card className="mb-3 shadow-sm">
       <Card.Body>
@@ -19,13 +16,9 @@ function DoctorCard({ doctor }) {
           <strong>Location:</strong> {doctor.location}
         </Card.Text>
 
-        <Button
-  variant="success"
-  onClick={() => navigate("/book-appointment")}
->
-  Book Appointment
-</Button>
-
+        <Button variant="success">
+          Book Appointment
+        </Button>
       </Card.Body>
     </Card>
   );

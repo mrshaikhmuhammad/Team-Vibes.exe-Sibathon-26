@@ -3,7 +3,6 @@ import HospitalHeader from "../components/HospitalHeader";
 import SymptomForm from "../components/SymptomForm";
 import DoctorCard from "../components/DoctorCard";
 import { useState } from "react";
-import CustomNavbar from "../components/Navbar";
 
 function AiAssistant() {
   const [doctors, setDoctors] = useState([]);
@@ -34,8 +33,7 @@ function AiAssistant() {
 
   return (
     <>
-      {/* <HospitalHeader /> */}
-       <CustomNavbar />
+      <HospitalHeader />
 
       <Container className="mt-5">
         <h3 className="text-center mb-4">
