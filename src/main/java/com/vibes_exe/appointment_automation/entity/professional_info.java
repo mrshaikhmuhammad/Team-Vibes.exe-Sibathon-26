@@ -16,8 +16,6 @@ public class professional_info {
     private String qualification;
     private int yearsOfExperience;
     private double consultationFee;
-    private String medicalLicenseNumber;
-    private String hospitalAffiliation;
 
     // Constructors
     public professional_info() {
@@ -25,16 +23,12 @@ public class professional_info {
 
     public professional_info(ObjectId doctorId, String specialization,
                             String qualification, int yearsOfExperience,
-                            double consultationFee,
-                            String medicalLicenseNumber,
-                            String hospitalAffiliation) {
+                            double consultationFee) {
         this.doctorId = doctorId;
         this.specialization = specialization;
         this.qualification = qualification;
         this.yearsOfExperience = yearsOfExperience;
         this.consultationFee = consultationFee;
-        this.medicalLicenseNumber = medicalLicenseNumber;
-        this.hospitalAffiliation = hospitalAffiliation;
     }
 
     // Getters and Setters
@@ -76,19 +70,5 @@ public class professional_info {
     }
     public void setConsultationFee(double consultationFee) {
         this.consultationFee = consultationFee;
-    }
-
-    public String getMedicalLicenseNumber() {
-        return medicalLicenseNumber;
-    }
-    public void setMedicalLicenseNumber(String medicalLicenseNumber) {
-        this.medicalLicenseNumber = medicalLicenseNumber;
-    }
-
-    public String getHospitalAffiliation() {
-        return hospitalAffiliation;
-    }
-    public void setHospitalAffiliation(String hospitalAffiliation) {
-        this.hospitalAffiliation = hospitalAffiliation;
     }
 }

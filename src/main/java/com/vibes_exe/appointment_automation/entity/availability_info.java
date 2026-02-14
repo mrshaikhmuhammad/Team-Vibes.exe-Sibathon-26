@@ -10,7 +10,7 @@ import java.util.List;
 public class availability_info {
 
     @Id
-    private ObjectId availability_id; // MongoDB ObjectId as string
+    private ObjectId availabilityId; // MongoDB ObjectId as string
 
     private ObjectId doctorId; // Reference to doctorBasicInfo _id
     private List<String> availableDays; // e.g., ["Monday", "Wednesday", "Friday"]
@@ -21,8 +21,8 @@ public class availability_info {
     public availability_info(){
 
     }
-    public availability_info(ObjectId availability_id, ObjectId doctorId, List<String> availableDays, String startTime, String endTime, int appointmentDuration) {
-        this.availability_id = availability_id;
+    public availability_info(ObjectId availabilityId, ObjectId doctorId, List<String> availableDays, String startTime, String endTime, int appointmentDuration) {
+        this.availabilityId = availabilityId;
         this.doctorId = doctorId;
         this.availableDays = availableDays;
         this.startTime = startTime;
@@ -37,11 +37,11 @@ public class availability_info {
         this.doctorId = doctorId;
     }
 
-    public ObjectId getAvailability_id() {
-        return availability_id;
+    public ObjectId getavailabilityId() {
+        return availabilityId;
     }
-    public void setAvailability_id(ObjectId availability_id) {
-        this.availability_id = availability_id;
+    public void setavailabilityId(ObjectId availabilityId) {
+        this.availabilityId = availabilityId;
     }
 
     public List<String> getAvailableDays() {
