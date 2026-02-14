@@ -1,8 +1,9 @@
-import { Container } from "react-bootstrap";
-import HospitalHeader from "../components/HospitalHeader";
+import { Container, Row, Col } from "react-bootstrap";
 import SymptomForm from "../components/SymptomForm";
 import DoctorCard from "../components/DoctorCard";
+import CustomNavbar from "../components/Navbar";
 import { useState } from "react";
+
 
 function AiAssistant() {
   const [doctors, setDoctors] = useState([]);
@@ -31,25 +32,32 @@ function AiAssistant() {
     ]);
   };
 
-  return (
-    <>
-      <HospitalHeader />
+return (
+  <>
+    <CustomNavbar />
 
-      <Container className="mt-5">
-        <h3 className="text-center mb-4">
-          AI Assistant – Book Your Appointment
-        </h3>
+    <div className="ai-banner">
+      <h2>AI Appointment Assistant</h2>
+      <p>Tell us your symptoms and we’ll match you with the right doctor.</p>
+    </div>
 
-        <SymptomForm onAnalyze={handleAnalysis} />
+    <Container className="mt-4">
+      <SymptomForm onAnalyze={handleAnalysis} />
+    </Container>
 
-        <div className="mt-4">
-          {doctors.map((doc) => (
-            <DoctorCard key={doc.id} doctor={doc} />
-          ))}
-        </div>
-      </Container>
-    </>
-  );
+    <Container className="mt-5">
+      <Row>
+        {doctors && doctors.map((doc) => (
+          <Col md={6} lg={4} key={doc.id}>
+            <DoctorCard doctor={doc} />
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  </>
+);
+
+
 }
 
 export default AiAssistant;
