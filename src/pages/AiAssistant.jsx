@@ -332,7 +332,11 @@ return (
   <>
     <CustomNavbar />
 
-    <div className="ai-banner">
+    <div className="ai-banner" style={{
+          background: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3') center/cover",
+          color: "white",
+          padding: "100px 0",
+        }}>
       <h2>AI Appointment Assistant</h2>
       <p>Tell us your symptoms and we’ll match you with the right doctor.</p>
     </div>
