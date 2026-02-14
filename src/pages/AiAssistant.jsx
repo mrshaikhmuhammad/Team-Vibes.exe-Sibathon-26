@@ -11,6 +11,12 @@ function AiAssistant() {
   const handleAnalysis = (symptoms) => {
     console.log("Symptoms:", symptoms);
 
+    {doctors.length > 0 && (
+  <h5 className="mt-4 mb-3 text-muted">
+    Recommended Specialists
+  </h5>
+)}
+
     // Simulated AI response specific to Aga Khan Hospital
     setDoctors([
       {
