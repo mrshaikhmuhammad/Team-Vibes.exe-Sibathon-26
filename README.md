@@ -1,4 +1,4 @@
-# 🏥 Team Vibes.exe - AI Hospital Appointment Scheduling System
+# 🏥 Team Vibes.exe - AI based Hospital Appointment Scheduling System
 
 **Sibathon 26 | Automating Hospital Appointment Scheduling with AI Assistance**
 
